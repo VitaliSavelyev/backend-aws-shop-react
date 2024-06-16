@@ -3,9 +3,9 @@ from aws_cdk import (
     Stack,
     # aws_sqs as sqs,
 )
-from backend_aws_shop_react.api_gateway import ApiGateway
-from backend_aws_shop_react.get_products import Products
-from backend_aws_shop_react.get_product_by_id import ProductsById
+from product_service.api_gateway import ApiGateway
+from product_service.get_products import Products
+from product_service.get_product_by_id import ProductsById
 from constructs import Construct
 
 class MyCdkAppStack(Stack):
