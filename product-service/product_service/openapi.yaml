@@ -20,12 +20,12 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Product'
-  /products/{id}:
+  /products/{productId}:
     get:
       summary: Get product by ID
       operationId: getProductById
       parameters:
-        - name: id
+        - name: productId
           in: path
           required: true
           description: ID of the product
