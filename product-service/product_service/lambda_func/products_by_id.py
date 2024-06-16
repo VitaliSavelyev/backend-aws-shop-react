@@ -11,7 +11,8 @@ def handler(event, content):
             "statusCode" : 200,
             "headers" : {
                 "Access-Control-Allow-Origin" : "*",
-                "Access-Control-Allow-Methods" : "GET, PUT, POST, DELETE, OPTIONS",
+                "Access-Control-Allow-Methods" : "GET",
+                "Access-Control-Allow-Headers": "Content-Type",
                 "content-type" : "application/json"
             },
             "body": json.dumps(product)
@@ -21,7 +22,8 @@ def handler(event, content):
             "statusCode" : 404,
             "headers" : {
                 "Access-Control-Allow-Origin" : "*",
-                "Access-Control-Allow-Methods" : "GET, PUT, POST, DELETE, OPTIONS",
+                "Access-Control-Allow-Methods" : "GET",
+                "Access-Control-Allow-Headers": "Content-Type",
                 "content-type" : "application/json"
             },
             "body": json.dumps("'message':'Product not found'")

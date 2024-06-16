@@ -8,6 +8,7 @@ def handler(event, content):
         "headers" : {
             "Access-Control-Allow-Origin" : "*",
             "Access-Control-Allow-Methods" : "GET",
+            "Access-Control-Allow-Headers": "Content-Type",
             "content-type" : "application/json"
         },
         "body": json.dumps(products)

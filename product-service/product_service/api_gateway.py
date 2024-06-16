@@ -13,7 +13,12 @@ class ApiGateway(Stack):
         super().__init__(scope, construct_id, **kwargs)
 
         api = apigateway.RestApi(self, "ProducServiceApi", rest_api_name="Product Service", 
-                                 default_cors_preflight_options = { "allow_origins": apigateway.Cors.ALL_ORIGINS })
+                                 default_cors_preflight_options = { 
+                                     "allow_origins": apigateway.Cors.ALL_ORIGINS,
+                                     "allow_methods": apigateway.Cors.ALL_METHODS,
+                                     "allow_headers": ["Content-Type", "X-Amz-Date", "Authorization", "X-Api-Key", "X-Amz-Security-Token"],
+                                     "status_code": 200 
+                                     })
 
         products_resource = api.root.add_resource('products')
         products_resource.add_method('GET', apigateway.LambdaIntegration(get_products_fn))
