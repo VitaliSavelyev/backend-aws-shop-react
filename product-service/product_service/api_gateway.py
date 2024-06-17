@@ -12,7 +12,7 @@ class ApiGateway(Stack):
     def __init__(self, scope: Construct, construct_id: str, get_products_fn: _lambda, get_products_by_id_fn: _lambda,  **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        api = apigateway.RestApi(self, "ProducServiceApi", rest_api_name="Product Service", 
+        api = apigateway.RestApi(self, "ProductServiceApi", rest_api_name="Product Service", 
                                  default_cors_preflight_options = { 
                                      "allow_origins": apigateway.Cors.ALL_ORIGINS,
                                      "allow_methods": apigateway.Cors.ALL_METHODS
