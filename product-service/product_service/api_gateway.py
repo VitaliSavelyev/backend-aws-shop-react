@@ -21,5 +21,5 @@ class ApiGateway(Stack):
         products_resource = api.root.add_resource('products')
         products_resource.add_method('GET', apigateway.LambdaIntegration(get_products_fn))
 
-        products_by_id_resource = products_resource.add_resource('{productId}')
+        products_by_id_resource = products_resource.add_resource('{id}')
         products_by_id_resource.add_method('GET', apigateway.LambdaIntegration(get_products_by_id_fn))

@@ -4,7 +4,7 @@ info:
   description: API for managing and retrieving products.
   version: 1.0.0
 servers:
-  - url: https://lkv8tsqqwf.execute-api.us-east-1.amazonaws.com/prod
+  - url: https://2bqy1y9k12.execute-api.us-east-1.amazonaws.com/prod
     description: Production server
 paths:
   /products:
@@ -20,12 +20,12 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Product'
-  /products/{productId}:
+  /products/{id}:
     get:
       summary: Get product by ID
       operationId: getProductById
       parameters:
-        - name: productId
+        - name: id
           in: path
           required: true
           description: ID of the product

@@ -13,7 +13,7 @@ class TestHandler(unittest.TestCase):
     def test_product_found(self):
         event = {
             'pathParameters': {
-                'productId': '1'
+                'id': '1'
             }
         }
         context = None
@@ -28,7 +28,7 @@ class TestHandler(unittest.TestCase):
     def test_product_not_found(self):
         event = {
             'pathParameters': {
-                'productId': '3'
+                'id': '3'
             }
         }
         context = None

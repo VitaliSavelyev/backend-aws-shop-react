@@ -4,7 +4,7 @@ from mock_products import MockProducts
 def handler(event, content):
     products = MockProducts
 
-    id = event['pathParametrs']["productId"]
+    id = event.get('pathParameters', {}).get('id')
     product = next((obj for obj in products if obj["id"] == id), None)
     if product: 
         return {
