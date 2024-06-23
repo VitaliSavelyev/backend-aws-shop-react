@@ -2,8 +2,9 @@ import json
 import boto3
 import os
 
-def handler(event, content):
-
+def handler(event, context):
+    print(f"Received event: {json.dumps(event)}")
+    print(f"Received context: {context}")
     try:
 
         dynamoDB = boto3.resource('dynamodb', region_name=os.getenv('AWS_REGION'))

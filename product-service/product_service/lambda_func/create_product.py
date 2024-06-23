@@ -4,7 +4,9 @@ import os
 import uuid
 from botocore.exceptions import ClientError
 
-def handler(event, content):
+def handler(event, context):
+    print(f"Received event: {json.dumps(event)}")
+    print(f"Received context: {context}")
     try:
         body = json.loads(event['body'])
 
