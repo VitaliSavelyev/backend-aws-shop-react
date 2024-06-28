@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-3 fix parametrs">
+    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-4 added loging for lambda">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/product_service/api_gateway.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/api_gateway.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/product_service/get_product_by_id.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/get_product_by_id.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/product_service/get_products.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/get_products.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/product_service/lambda_deployment.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/lambda_deployment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/product_service/lambda_func/products.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/lambda_func/products.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/product_service/lambda_func/products_by_id.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/lambda_func/products_by_id.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/product_service/product_service_stack.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/product_service/lambda_func/create_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/lambda_func/create_product.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +60,10 @@
       <workItem from="1718571040313" duration="926000" />
       <workItem from="1718604110037" duration="4947000" />
       <workItem from="1719058077609" duration="1756000" />
+      <workItem from="1719133947857" duration="2978000" />
+      <workItem from="1719159355771" duration="113000" />
+      <workItem from="1719213436787" duration="384000" />
+      <workItem from="1719572288149" duration="1660000" />
     </task>
     <task id="LOCAL-00001" summary="backend part">
       <option name="closed" value="true" />
@@ -155,11 +153,49 @@
       <option name="project" value="LOCAL" />
       <updated>1718609160278</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="task-4 added realisation of task 4">
+      <option name="closed" value="true" />
+      <created>1719143164600</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719143164600</updated>
+    </task>
+    <task id="LOCAL-00013" summary="task-4 added loging for lambda">
+      <option name="closed" value="true" />
+      <created>1719150980702</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719150980702</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="backend part" />
@@ -172,6 +208,8 @@
     <MESSAGE value="task-3 tests" />
     <MESSAGE value="task-3 fix get by id" />
     <MESSAGE value="task-3 fix parametrs" />
-    <option name="LAST_COMMIT_MESSAGE" value="task-3 fix parametrs" />
+    <MESSAGE value="task-4 added realisation of task 4" />
+    <MESSAGE value="task-4 added loging for lambda" />
+    <option name="LAST_COMMIT_MESSAGE" value="task-4 added loging for lambda" />
   </component>
 </project>
