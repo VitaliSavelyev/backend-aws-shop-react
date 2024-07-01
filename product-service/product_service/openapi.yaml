@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+  title: Product Service API
+  description: API for managing and retrieving products.
+  version: 1.0.0
+servers:
+  - url: https://2bqy1y9k12.execute-api.us-east-1.amazonaws.com/prod
+    description: Production server
+paths:
+  /products:
+    get:
+      summary: Get all products
+      operationId: getProducts
+      responses:
+        '200':
+          description: A list of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+  /products/{id}:
+    get:
+      summary: Get product by ID
+      operationId: getProductById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the product
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A single product
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: "Product not found"
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: "Bad request"
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        title:
+          type: string
+          example: "Product Name"
+        price:
+          type: number
+          example: 1000
+        description:
+          type: string
+          example: "Product description"
