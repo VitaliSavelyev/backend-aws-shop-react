@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-5 added tests and parser" />
+    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-5 updated cors politic" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +62,7 @@
       <workItem from="1719213436787" duration="384000" />
       <workItem from="1719572288149" duration="2865000" />
       <workItem from="1719685417486" duration="629000" />
+      <workItem from="1719820050289" duration="619000" />
     </task>
     <task id="LOCAL-00001" summary="backend part">
       <option name="closed" value="true" />
@@ -183,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719685450460</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="task-5 updated cors politic">
+      <option name="closed" value="true" />
+      <created>1719820070506</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1719820070506</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +235,7 @@
     <MESSAGE value="task-4 added loging for lambda" />
     <MESSAGE value="task-5 init import service" />
     <MESSAGE value="task-5 added tests and parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="task-5 added tests and parser" />
+    <MESSAGE value="task-5 updated cors politic" />
+    <option name="LAST_COMMIT_MESSAGE" value="task-5 updated cors politic" />
   </component>
 </project>

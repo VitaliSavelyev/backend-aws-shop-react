@@ -4,13 +4,13 @@ import os
 import io
 import csv
 
+s3 = boto3.client('s3')
+
 def handler(event, context):
     print(f"Received event: {json.dumps(event)}")
     print(f"Received context: {context}")
     try:
         bucket_name = os.getenv('BUCKET_NAME')
-        s3 = boto3.client('s3')
-
         records = event.get('Records')
 
         if not(records):
@@ -32,6 +32,8 @@ def handler(event, context):
 
             body = response['Body']
 
+            print(body)
+
             csv_file = io.StringIO(body.read().decode('utf-8'))
             reader = csv.DictReader(csv_file)
             print("File rows:")
@@ -44,10 +46,11 @@ def handler(event, context):
             }
 
             parsed_key = key.replace('uploaded/', 'parsed/')
+            s3.copy_object(CopySource=copy_source, Bucket=bucket_name, Key=parsed_key)
 
-            s3.copy_object(CopySourse=copy_source, Bucket=bucket_name, Key=parsed_key)
+            print(key, key != 'uploaded/')
 
-            if(key !='uploaded/'):
+            if key != 'uploaded/':
                 s3.delete_object(Bucket=bucket_name, Key=key)
     except Exception as e:
         return {
