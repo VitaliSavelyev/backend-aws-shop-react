@@ -20,15 +20,19 @@ def handler(event, context):
             }
         
         bucket_name = os.getenv('BUCKET_NAME') or 'task-5-bucket'
-        key = f"/uploaded/{file_name}"
+        key = f"uploaded/{file_name}"
 
         params = {
             'Bucket': bucket_name,
-            'Key': key
+            'Key': key,
+            'ContentType': 'text/csv'
         }
         
         s3 = boto3.client('s3')
-        singed_url = s3.generate_presigned_url('put_object', Params=params)
+
+        signed_url = s3.generate_presigned_url('put_object', Params=params, ExpiresIn=3600)
+
+        print(f"signed url: {signed_url}")
 
         return {
             "statusCode" : 200,
@@ -38,7 +42,7 @@ def handler(event, context):
                 "Access-Control-Allow-Headers": "Content-Type",
                 "content-type" : "application/json"
             },
-            "body": singed_url
+            "body": signed_url
         }
     except Exception as e:
         return {
