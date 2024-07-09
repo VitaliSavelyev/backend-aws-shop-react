@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-3 updated yaml" />
+    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-3 fix parametrs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/product_service/api_gateway.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/api_gateway.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/product_service/get_product_by_id.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/get_product_by_id.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/product_service/get_products.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/get_products.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/product_service/lambda_deployment.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/lambda_deployment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/product_service/lambda_func/products.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/lambda_func/products.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/product_service/lambda_func/products_by_id.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/lambda_func/products_by_id.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/product_service/product_service_stack.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +42,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/VitaliSavelyev/projects&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/VitaliSavelyev/projects/nodejs-aws-shop-react&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -54,6 +64,8 @@
       <workItem from="1718552552125" duration="1153000" />
       <workItem from="1718556103223" duration="6760000" />
       <workItem from="1718571040313" duration="926000" />
+      <workItem from="1718604110037" duration="4947000" />
+      <workItem from="1719058077609" duration="1756000" />
     </task>
     <task id="LOCAL-00001" summary="backend part">
       <option name="closed" value="true" />
@@ -119,7 +131,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718571568478</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="task-3 tests">
+      <option name="closed" value="true" />
+      <created>1718604144509</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718604144509</updated>
+    </task>
+    <task id="LOCAL-00010" summary="task-3 fix get by id">
+      <option name="closed" value="true" />
+      <created>1718606563743</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718606563743</updated>
+    </task>
+    <task id="LOCAL-00011" summary="task-3 fix parametrs">
+      <option name="closed" value="true" />
+      <created>1718609160278</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718609160278</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +169,9 @@
     <MESSAGE value="task-3 updated cors" />
     <MESSAGE value="task-3 added swagger" />
     <MESSAGE value="task-3 updated yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="task-3 updated yaml" />
+    <MESSAGE value="task-3 tests" />
+    <MESSAGE value="task-3 fix get by id" />
+    <MESSAGE value="task-3 fix parametrs" />
+    <option name="LAST_COMMIT_MESSAGE" value="task-3 fix parametrs" />
   </component>
 </project>
