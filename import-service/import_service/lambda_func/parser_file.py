@@ -5,12 +5,14 @@ import io
 import csv
 
 s3 = boto3.client('s3')
+sqs = boto3.client('sqs')
 
 def handler(event, context):
     print(f"Received event: {json.dumps(event)}")
     print(f"Received context: {context}")
     try:
         bucket_name = os.getenv('BUCKET_NAME')
+        sqs_queue_url = os.environ['SQS_QUEUE_URL']
         records = event.get('Records')
 
         if not(records):
@@ -38,7 +40,7 @@ def handler(event, context):
             reader = csv.DictReader(csv_file)
             print("File rows:")
             for row in reader:
-                print(row)
+                sqs.send_message(QueueUrl=sqs_queue_url, MessageBody=json.dumps(row))
             
             copy_source = {
             'Bucket': bucket_name,
