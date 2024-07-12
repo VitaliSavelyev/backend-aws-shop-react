@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-6 added sqs for import file">
+    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-6 updated product creation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/product_service/lambda_deployment.py" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/product_service/lambda_deployment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <workItem from="1719820050289" duration="619000" />
       <workItem from="1719831773248" duration="298000" />
       <workItem from="1720295083338" duration="648000" />
-      <workItem from="1720506850705" duration="651000" />
+      <workItem from="1720506850705" duration="1300000" />
     </task>
     <task id="LOCAL-00001" summary="backend part">
       <option name="closed" value="true" />
@@ -222,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720506900521</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="task-6 updated product creation">
+      <option name="closed" value="true" />
+      <created>1720510457766</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1720510457766</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +276,7 @@
     <MESSAGE value="task-5 updated parser" />
     <MESSAGE value="task-6 create 6 module" />
     <MESSAGE value="task-6 added sqs for import file" />
-    <option name="LAST_COMMIT_MESSAGE" value="task-6 added sqs for import file" />
+    <MESSAGE value="task-6 updated product creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="task-6 updated product creation" />
   </component>
 </project>

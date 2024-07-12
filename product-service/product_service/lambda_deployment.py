@@ -28,14 +28,12 @@ class MyCdkAppStack(Stack):
         get_products_lbd = Products(self, "Products", environment)
         get_products_by_id_lbd = ProductsById(self, "ProductsById", environment)
         create_product_lbd = CreateProduct(self, 'CreateProduct', environment)
-        put_batch_processor_lbd = PutBatchProcessor(self, 'PutBatch', environment)
 
         ApiGateway(self, 
                    "ApiGateway", 
                    get_products_fn=get_products_lbd.get_products, 
                    get_products_by_id_fn=get_products_by_id_lbd.get_products_by_id, 
-                   create_product_fn=create_product_lbd.create_product,
-                   put_batch_processor_fn=put_batch_processor_lbd.put_batch)
+                   create_product_fn=create_product_lbd.create_product)
         
         product_table.grant_read_write_data(get_products_lbd.get_products)
         stock_table.grant_read_write_data(get_products_lbd.get_products)
@@ -43,6 +41,6 @@ class MyCdkAppStack(Stack):
         stock_table.grant_read_write_data(get_products_by_id_lbd.get_products_by_id)
         product_table.grant_read_write_data(create_product_lbd.create_product)
         stock_table.grant_read_write_data(create_product_lbd.create_product)
-        product_table.grant_read_write_data(put_batch_processor_lbd.put_batch)
-        stock_table.grant_read_write_data(put_batch_processor_lbd.put_batch)
+
+        PutBatchProcessor(self, 'PutBatch', environment)
 

@@ -9,7 +9,7 @@ sns = boto3.client('sns')
 
 def handler(event, context):
     table_name = os.getenv('PRODUCTS_TABLE_NAME')
-    stocks_table_name = os.getenv('STOCKS_TABLE_NAME')
+    stocks_table_name = os.getenv('STOCK_TABLE_NAME')
     sns_topic_arn = os.getenv('SNS_TOPIC_ARN')
 
     try:
