@@ -10,7 +10,12 @@ def handler(event, context):
     try:
         body = json.loads(event['body'])
 
-        if not(body['title']) or not(body['price']):
+        product_description = body.get('description', '')
+        product_title = body.get('title', '')
+        product_price = body.get('price', 0)
+        product_count = body.get('count', 0)
+
+        if not(product_title) or not(product_price) or product_price < 0 or product_count < 0:
             return {
                 "statusCode" : 400,
                 "headers" : {
@@ -30,18 +35,15 @@ def handler(event, context):
 
         product_id = str(uuid.uuid4())
 
-        product_item = {'id': product_id, 'title': body['title'], 'price': body['price'], 'description': body['description'] or ''}
-        count_item = {'product_id': product_id, 'count': body['count'] or 0}
-
         transact_items = [
             {
                 "Put": {
                     "TableName": product_table_name,
                     "Item": {
-                        "id": {"S": product_item["id"]},
-                        "title": {"S": product_item["title"]},
-                        "description": {"S": product_item["description"]},
-                        "price":  {"N": str(product_item["price"])}
+                        "id": {"S": product_id},
+                        "title": {"S": product_title},
+                        "description": {"S": product_description},
+                        "price":  {"N": str(product_price)}
                     }
                 }
             },
@@ -49,14 +51,16 @@ def handler(event, context):
                 "Put": {
                     "TableName": count_table_name,
                     "Item": {
-                        "product_id": {"S": count_item["product_id"]},
-                        "count":  {"N": str(count_item["count"])}
+                        "product_id": {"S": product_id},
+                        "count":  {"N": str(product_count)}
                     }
                 }
             }
         ]
 
         dynamoDB.transact_write_items(TransactItems=transact_items)
+
+        product_item = {'id': product_id, 'title': product_title, 'price': product_price, 'description': product_description}
         
         return {
                 "statusCode" : 201,
