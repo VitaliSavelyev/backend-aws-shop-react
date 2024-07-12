@@ -7,8 +7,8 @@ from constructs import Construct
 
 class ApiGateway(Stack):
 
-    def __init__(self, scope: Construct, id: str, import_product__fn=_lambda, **kwargs) -> None:
-        super().__init__(scope, id, **kwargs)
+    def __init__(self, scope: Construct, construct_id: str, import_product__fn=_lambda, **kwargs) -> None:
+        super().__init__(scope, construct_id, **kwargs)
 
         api = apigateway.RestApi(self, "ImportServiceApi", rest_api_name="Import Service", 
                                  default_cors_preflight_options = { 

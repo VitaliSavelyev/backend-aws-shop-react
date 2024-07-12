@@ -8,8 +8,8 @@ from constructs import Construct
 
 class ImportFile(Stack):
 
-    def __init__(self, scope: Construct, id: str, bucket_name: str, **kwargs) -> None:
-        super().__init__(scope, id, **kwargs)
+    def __init__(self, scope: Construct, construct_id: str, bucket_name: str, **kwargs) -> None:
+        super().__init__(scope, construct_id, **kwargs)
 
         bucket = s3.Bucket.from_bucket_name(self, 'ImportBucket', bucket_name)
 

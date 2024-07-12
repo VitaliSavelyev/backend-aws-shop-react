@@ -4,13 +4,15 @@ import os
 import io
 import csv
 
+s3 = boto3.client('s3')
+sqs = boto3.client('sqs')
+
 def handler(event, context):
     print(f"Received event: {json.dumps(event)}")
     print(f"Received context: {context}")
     try:
         bucket_name = os.getenv('BUCKET_NAME')
-        s3 = boto3.client('s3')
-
+        sqs_queue_url = os.environ['SQS_QUEUE_URL']
         records = event.get('Records')
 
         if not(records):
@@ -32,11 +34,13 @@ def handler(event, context):
 
             body = response['Body']
 
+            print(body)
+
             csv_file = io.StringIO(body.read().decode('utf-8'))
             reader = csv.DictReader(csv_file)
             print("File rows:")
             for row in reader:
-                print(row)
+                sqs.send_message(QueueUrl=sqs_queue_url, MessageBody=json.dumps(row))
             
             copy_source = {
             'Bucket': bucket_name,
@@ -44,10 +48,11 @@ def handler(event, context):
             }
 
             parsed_key = key.replace('uploaded/', 'parsed/')
+            s3.copy_object(CopySource=copy_source, Bucket=bucket_name, Key=parsed_key)
 
-            s3.copy_object(CopySourse=copy_source, Bucket=bucket_name, Key=parsed_key)
+            print(key, key != 'uploaded/')
 
-            if(key !='uploaded/'):
+            if key != 'uploaded/':
                 s3.delete_object(Bucket=bucket_name, Key=key)
     except Exception as e:
         return {

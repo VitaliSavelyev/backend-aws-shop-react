@@ -6,6 +6,7 @@ from product_service.api_gateway import ApiGateway
 from product_service.get_products import Products
 from product_service.get_product_by_id import ProductsById
 from product_service.create_product import CreateProduct
+from product_service.put_batch_processor import PutBatchProcessor
 from constructs import Construct
 
 class MyCdkAppStack(Stack):
@@ -40,4 +41,6 @@ class MyCdkAppStack(Stack):
         stock_table.grant_read_write_data(get_products_by_id_lbd.get_products_by_id)
         product_table.grant_read_write_data(create_product_lbd.create_product)
         stock_table.grant_read_write_data(create_product_lbd.create_product)
+
+        PutBatchProcessor(self, 'PutBatch', environment)
 
