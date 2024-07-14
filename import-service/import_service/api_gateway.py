@@ -7,7 +7,7 @@ from constructs import Construct
 
 class ApiGateway(Stack):
 
-    def __init__(self, scope: Construct, construct_id: str, import_product__fn=_lambda, **kwargs) -> None:
+    def __init__(self, scope: Construct, construct_id: str, import_product__fn=_lambda.IFunction, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
         basic_authorizier_lambda = _lambda.Function.from_function_name(self, 'authFunction', 'AuthFunction')
@@ -22,8 +22,13 @@ class ApiGateway(Stack):
         authorizer = apigateway.TokenAuthorizer(self, 'Authorizier',
                                    handler=basic_authorizier_lambda,
                                    identity_source='method.request.header.Authorization')
-        
-        import_resource = api.root.add_resource('import')
+
+        import_resource = api.root.add_resource('import', default_cors_preflight_options={
+            "allow_origins": apigateway.Cors.ALL_ORIGINS,
+            "allow_methods": apigateway.Cors.ALL_METHODS,
+            "allow_headers": apigateway.Cors.DEFAULT_HEADERS
+        })
+
         import_resource.add_method('GET', apigateway.LambdaIntegration(import_product__fn),
                                    authorization_type=apigateway.AuthorizationType.CUSTOM,
                                    authorizer=authorizer)
