@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-7 added authorization logic" />
+    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-7 updated lambda authorization" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,20 +29,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/VitaliSavelyev/projects/backend-aws-shop-react",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/VitaliSavelyev/projects/backend-aws-shop-react&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,6 +69,7 @@
       <workItem from="1720770071354" duration="78000" />
       <workItem from="1720770381294" duration="233000" />
       <workItem from="1720867660681" duration="2447000" />
+      <workItem from="1720971795171" duration="58000" />
     </task>
     <task id="LOCAL-00001" summary="backend part">
       <option name="closed" value="true" />
@@ -254,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720877041249</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="task-7 updated lambda authorization">
+      <option name="closed" value="true" />
+      <created>1720971814999</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1720971814999</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +314,7 @@
     <MESSAGE value="task-6 refactoring code" />
     <MESSAGE value="task-7 initial task" />
     <MESSAGE value="task-7 added authorization logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="task-7 added authorization logic" />
+    <MESSAGE value="task-7 updated lambda authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="task-7 updated lambda authorization" />
   </component>
 </project>

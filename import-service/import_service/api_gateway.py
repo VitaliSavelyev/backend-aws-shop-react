@@ -16,7 +16,7 @@ class ApiGateway(Stack):
                                  default_cors_preflight_options = { 
                                      "allow_origins": apigateway.Cors.ALL_ORIGINS,
                                      "allow_methods": apigateway.Cors.ALL_METHODS,
-                                     "allow_headers": ["Content-Type", "X-Amz-Date", "Authorization", "X-Api-Key", "X-Amz-Security-Token"]
+                                     "allow_headers": apigateway.Cors.DEFAULT_HEADERS
                                      })
         
         authorizer = apigateway.TokenAuthorizer(self, 'Authorizier',
