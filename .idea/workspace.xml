@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-5 added tests and parser" />
+    <list default="true" id="3d12de02-2fad-40eb-9aac-08c320c84d5a" name="Changes" comment="task-7 updated lambda authorization" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +34,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/VitaliSavelyev/projects/nodejs-aws-shop-react&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/VitaliSavelyev/projects/backend-aws-shop-react&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -62,6 +62,14 @@
       <workItem from="1719213436787" duration="384000" />
       <workItem from="1719572288149" duration="2865000" />
       <workItem from="1719685417486" duration="629000" />
+      <workItem from="1719820050289" duration="619000" />
+      <workItem from="1719831773248" duration="298000" />
+      <workItem from="1720295083338" duration="648000" />
+      <workItem from="1720506850705" duration="1300000" />
+      <workItem from="1720770071354" duration="78000" />
+      <workItem from="1720770381294" duration="233000" />
+      <workItem from="1720867660681" duration="2447000" />
+      <workItem from="1720971795171" duration="58000" />
     </task>
     <task id="LOCAL-00001" summary="backend part">
       <option name="closed" value="true" />
@@ -183,7 +191,79 @@
       <option name="project" value="LOCAL" />
       <updated>1719685450460</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="task-5 updated cors politic">
+      <option name="closed" value="true" />
+      <created>1719820070506</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1719820070506</updated>
+    </task>
+    <task id="LOCAL-00017" summary="task-5 updated parser">
+      <option name="closed" value="true" />
+      <created>1719831786585</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1719831786585</updated>
+    </task>
+    <task id="LOCAL-00018" summary="task-6 create 6 module">
+      <option name="closed" value="true" />
+      <created>1720295125132</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720295125132</updated>
+    </task>
+    <task id="LOCAL-00019" summary="task-6 added sqs for import file">
+      <option name="closed" value="true" />
+      <created>1720506900521</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1720506900521</updated>
+    </task>
+    <task id="LOCAL-00020" summary="task-6 updated product creation">
+      <option name="closed" value="true" />
+      <created>1720510457766</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1720510457766</updated>
+    </task>
+    <task id="LOCAL-00021" summary="task-6 refactoring code">
+      <option name="closed" value="true" />
+      <created>1720770084857</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1720770084857</updated>
+    </task>
+    <task id="LOCAL-00022" summary="task-7 initial task">
+      <option name="closed" value="true" />
+      <created>1720770435245</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1720770435245</updated>
+    </task>
+    <task id="LOCAL-00023" summary="task-7 added authorization logic">
+      <option name="closed" value="true" />
+      <created>1720877041249</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1720877041249</updated>
+    </task>
+    <task id="LOCAL-00024" summary="task-7 updated lambda authorization">
+      <option name="closed" value="true" />
+      <created>1720971814999</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1720971814999</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +306,15 @@
     <MESSAGE value="task-4 added loging for lambda" />
     <MESSAGE value="task-5 init import service" />
     <MESSAGE value="task-5 added tests and parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="task-5 added tests and parser" />
+    <MESSAGE value="task-5 updated cors politic" />
+    <MESSAGE value="task-5 updated parser" />
+    <MESSAGE value="task-6 create 6 module" />
+    <MESSAGE value="task-6 added sqs for import file" />
+    <MESSAGE value="task-6 updated product creation" />
+    <MESSAGE value="task-6 refactoring code" />
+    <MESSAGE value="task-7 initial task" />
+    <MESSAGE value="task-7 added authorization logic" />
+    <MESSAGE value="task-7 updated lambda authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="task-7 updated lambda authorization" />
   </component>
 </project>

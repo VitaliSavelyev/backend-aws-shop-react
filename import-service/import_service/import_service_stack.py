@@ -13,7 +13,7 @@ class ImportServiceStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        bucket_name = 'task-5-bucket-import'
+        bucket_name = 'task-6-bucket-import'
 
         import_product_lambda__lbd = ImportFile(self, 'ImportLambda', bucket_name)
         ParserImportFile(self, 'ParserLambda', bucket_name)
